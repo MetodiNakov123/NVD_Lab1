@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vezba 1.2</title>
+
+    <script>
+
+        function soberi() {
+            var br = document.getElementById("broj").value;
+            br = parseInt(br);
+            if (isNaN(br)){
+                alert("TREBA DA VNESETE BROJ!!!");
+            }
+            else{
+                br = br + 5;
+                document.getElementById("rezultat").innerHTML =br ;
+            }
+        }
+
+        function string() {
+            var pr = "Hello";
+            pr = pr + " World!"
+            document.getElementById("str").innerHTML = pr;
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <input type="number" id="broj" placeholder="Vnesi broj"/>
+    <button onclick="soberi()">Presmetaj</button> <br/>
+    <span>Rezultatot iznesuva: </span> <b><span id="rezultat"></span></b>
+    <br/><br/>
+
+    <button onclick="string()"> String</button>
+    <p id="str"></p>
+
+</body>
+</html>

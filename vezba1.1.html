@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vezba 1.1</title>
+</head>
+<body>
+    <p>Креирајте вредност, доделете и вредност и прикажете ја:</p>
+    <span>Promenliva1 = </span><span id="prom1"></span> <br/>
+    <span>Promenliva2 = </span><span id="prom2"></span> <br/>
+
+    <button onclick="prikazi()">Prikazi vrednost na promenlivite</button>
+
+    <script>
+
+        var promenliva1 = 10;
+        var promenliva2 = 'Napreden veb dizajn';
+
+        function prikazi(){
+            document.getElementById("prom1").innerHTML = promenliva1;
+            document.getElementById("prom2").innerHTML = promenliva2;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca 3</title>
+
+    <script>
+       var Rectangle = function (width, height) {
+           this.width = width;
+           this.height = height;
+       }
+
+       Rectangle.prototype.PrintRectangle = function () {
+           return "Rectangle width is " + this.width + " and Rectangle height is " + this.height ;
+       }
+
+       Rectangle.prototype.RectanglePerimetar = function () {
+           return this.width*2 + this.height*2;
+       }
+
+       var rectangle1 = new Rectangle(2,4);
+       var rectangle2 = new Rectangle(8.5, 11);
+
+       window.onload = function () {
+           document.getElementById("par1").innerText = `${rectangle1.PrintRectangle()} \n ${rectangle2.PrintRectangle()}`;
+       }
+
+       function presmetajPerimetar() {
+            var per1 = rectangle1.RectanglePerimetar();
+            var per2 = rectangle2.RectanglePerimetar();
+
+            if (parseInt(per1) >= parseInt(per2)){
+                document.getElementById("par2").innerText = `The biggest Rectangle has perimetar of ${per1}`;
+            }
+            else{
+                document.getElementById("par2").innerText = `The biggest Rectangle has perimetar of ${per2}`;
+            }
+
+       }
+
+
+    </script>
+
+</head>
+<body>
+    <p><b>Paragraph no: 1</b></p>
+    <p id="par1"></p>
+
+    <p><b>Paragraph no: 2</b></p>
+    <p id="par2"></p>
+
+    <button onclick="presmetajPerimetar()">Calculate perimetar</button>
+
+
+</body>
+</html>

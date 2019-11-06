@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vezba 2</title>
+
+    <script>
+        var numbers = [5,10,15,20,25];
+        var cars = ["BMW", "Opel", "Audi", "Mercedes", "Ferrari", "Zastava", "VW"];
+
+        function arrLength() {
+            var x = document.getElementById("par1");
+            x.innerText = `Paragraph no: 1 \n Length of numbers is: ${numbers.length} \n Length of cars is: ${cars.length} \n`;
+        }
+        
+        function iteration() {
+            var suma = 0;
+            for( var i=0; i<numbers.length; i++){
+                suma = parseInt(suma) + parseInt(numbers[i]);
+            }
+            var prosek = suma * 1.0 / numbers.length;
+
+
+            var string = ""
+            for(var i=0; i<cars.length; i++){
+                string += (parseInt(i)+1) + ". " + cars[i] + " ";
+            }
+
+            var x = document.getElementById("par2");
+            x.innerText = `Paragraph no: 2 \n ${string} \n The Sum of the numbers is: ${suma} and the Average is: ${prosek} \n`;
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <p id="par1"></p>
+    <p id="par2"></p>
+
+    <button id="btn1" onclick="arrLength()">Show Arrays Length</button>
+    <button id="btn2" onclick="iteration()">Array Iteration</button>
+
+</body>
+</html>
